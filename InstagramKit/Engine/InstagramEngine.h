@@ -202,17 +202,17 @@ typedef enum
 #pragma mark - Comments -
 
 
-- (void)getCommentsOnMedia:(InstagramMedia *)media
+- (void)getCommentsOnMedia:(NSString *)mediaId
                withSuccess:(InstagramCommentsBlock)success
                    failure:(InstagramFailureBlock)failure;
 
 - (void)createComment:(NSString *)commentText
-              onMedia:(InstagramMedia *)media
+              onMedia:(NSString *)mediaId
           withSuccess:(void (^)(void))success
               failure:(InstagramFailureBlock)failure;
 
 - (void)removeComment:(NSString *)commentId
-              onMedia:(InstagramMedia *)media
+              onMedia:(NSString *)mediaId
           withSuccess:(void (^)(void))success
               failure:(InstagramFailureBlock)failure;
 
@@ -220,15 +220,15 @@ typedef enum
 #pragma mark - Likes -
 
 
-- (void)getLikesOnMedia:(InstagramMedia *)media
+- (void)getLikesOnMedia:(NSString *)mediaId
             withSuccess:(void (^)(NSArray *likedUsers))success
                 failure:(InstagramFailureBlock)failure;
 
-- (void)likeMedia:(InstagramMedia *)media
+- (void)likeMedia:(NSString *)mediaId
       withSuccess:(void (^)(void))success
           failure:(InstagramFailureBlock)failure;
 
-- (void)unlikeMedia:(InstagramMedia *)media
+- (void)unlikeMedia:(NSString *)mediaId
         withSuccess:(void (^)(void))success
             failure:(InstagramFailureBlock)failure;
 
